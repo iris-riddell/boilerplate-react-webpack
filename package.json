@@ -9,6 +9,8 @@
   "scripts": {
     "client": "webpack-dev-server --hot --inline",
     "dev": "node server & webpack --watch",
+    "dev-client": "webpack-dev-server --hot --inline --content-base public",
+    "dev-server": "nodemon --watch server",
     "server": "node server",
     "start": "webpack && node server",
     "test": "jest --watchAll"
@@ -29,7 +31,9 @@
     ]
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.4",
+    "nodemon": "^1.19.2",
     "superagent": "^5.0.2"
   },
   "devDependencies": {
